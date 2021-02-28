@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 //create the  navbar
 export function NavBar() {
@@ -55,7 +56,7 @@ export function NavBar() {
 
 export function Jumbotron() {
 	return (
-		<div className="jumbotron">
+		<div className="jumbotron col-12">
 			<h1 className="display-4">Hello, world!</h1>
 			<p className="lead">
 				This is a simple hero unit, a simple jumbotron-style component
@@ -74,53 +75,42 @@ export function Jumbotron() {
 	);
 }
 
-const styleCard = {
-	margin: {
-		width: "19rem",
-		margin: " 10px 10px"
-	},
-	marginL: {
-		width: "19rem",
-		margin: " 10px 10px 0 px 10px"
-	}
-};
-
-//create the Card
-
-export function Card(props) {
+export function Card() {
 	return (
-		<div className="card mb-3" style={styleCard[props.type]}>
-			<img
-				className="card-img-top"
-				src="http://placehold.it/500x325.jpg"
-				alt="Card image cap"
-			/>
-			<div className="card-body text-center my-2">
-				<h5 className="card-title">Card title</h5>
-				<p className="card-text">
-					Some quick example text to build on the card title and
-					makeup the bulk of the cards content.
-				</p>
-			</div>
-			<div className="card-footer text-center text-muted">
-				<a href="#" className="btn btn-primary">
-					Go somewhere
-				</a>
+		<div className="col-lg-4 col-md-6 col-sm-12 p-1">
+			<div className={`card mb-3W`}>
+				<img
+					className="card-img-top"
+					src="http://placehold.it/500x325.jpg"
+					alt="Card image cap"
+				/>
+				<div className="card-body text-center my-2">
+					<h5 className="card-title">Card title</h5>
+					<p className="card-text">
+						Some quick example text to build on the card title and
+						makeup the bulk of the cards content.
+					</p>
+				</div>
+				<div className="card-footer text-center text-muted">
+					<a href="#" className="btn btn-primary">
+						Go somewhere
+					</a>
+				</div>
 			</div>
 		</div>
 	);
 }
 
-Card.propTypes = {
-	type: PropTypes.string
-};
-
 //create the Foot
 
 export function Foot() {
 	return (
-		<div className="bg-dark">
-			<h1>Hola </h1>
-		</div>
+		<footer className="bg-dark text-center text-lg-start">
+			<div className="container p-4">
+				<p className="text-white m-0 p-0">
+					Copyright &copy; My web {new Date().getFullYear()} Yanca
+				</p>
+			</div>
+		</footer>
 	);
 }
