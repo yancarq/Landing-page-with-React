@@ -6,6 +6,11 @@ export function NavBar() {
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-around">
+				<div>
+					<a className="navbar-brand" href="#">
+						Start Bootstrap
+					</a>
+				</div>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -16,11 +21,6 @@ export function NavBar() {
 					aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon"></span>
 				</button>
-				<div>
-					<a className="navbar-brand" href="#">
-						Start Bootstrap
-					</a>
-				</div>
 				<div
 					className="collapse navbar-collapse flex-grow-0"
 					id="navbarSupportedContent">
